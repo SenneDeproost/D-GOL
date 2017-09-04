@@ -1,0 +1,8 @@
+*.rkt~
+*.rkt#*
+compiled/
+*.exe
+*.
+*.1
+*.2
+*.bak
