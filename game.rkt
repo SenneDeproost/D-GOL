@@ -2,4 +2,8 @@
 
 (require "ADT/field-ADT.rkt")
 
-(define game (mk-field-ADT 10 10))
+(define game (mk-field-ADT 20 20))
+
+(game 'step!)
+
+(game 'display-field)

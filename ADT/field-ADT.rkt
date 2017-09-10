@@ -44,7 +44,6 @@
   (count (+ x 1) (+ y 1))
 
   n
-
   )
 
 (define (alive! x y)
@@ -65,12 +64,12 @@
   ((or (= n 2) (= n 3))
     (void))
   ((> n 3)
-    (dead! x y))
+    (dead! x y))))
+  (else
+    (when (= n 3)
+      (alive! x y))
+      )
   ))
-(else
-  (when (= n 3)
-    (alive! x y)
-  ))))
 
 
 (define (step!)
