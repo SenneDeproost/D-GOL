@@ -7,7 +7,7 @@ MATRIX
 
 (library
  (matrix)
- (export new ref set!)
+ (export new ref set! width height)
  (import
   (rnrs base)
   (rnrs control)
