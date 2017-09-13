@@ -30,8 +30,11 @@ MATRIX
  (define (ref matrix colom row)
    (define x (width matrix))
    (define offset (+ (* row x) colom))
-   (when (not (matrix? matrix))
-     (error ref "Given argument is not a valid matrix."))
    (vector-ref (storage matrix) offset))
+
+ (define (set! matrix colom row data)
+   (define x (width matrix))
+   (define offset (+ (* row x) colom))
+   (vector-set! (storage matrix) offset data))
  
  )
