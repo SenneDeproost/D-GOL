@@ -7,14 +7,13 @@ MATRIX
 
 (library
  (matrix)
- (export new)
+ (export new ref set!)
  (import
   (rnrs base)
   (rnrs control)
+  (only (racket base) null)
   (srfi :9)
   )
-
- (define null '())
 
  (define-record-type matrix
    (make w h s)
@@ -36,5 +35,5 @@ MATRIX
    (define x (width matrix))
    (define offset (+ (* row x) colom))
    (vector-set! (storage matrix) offset data))
- 
+
  )
